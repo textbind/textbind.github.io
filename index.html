@@ -217,10 +217,10 @@
         <h2 class="title is-3">Model</h2>
         <div class="content has-text-justified">
           <p>
-           PandaGPT combines the multimodal encoders from ImageBind and the large language models from Vicuna, achieving impressive capabilities in vision- and audio-grounded instruction following tasks. <b>Notably, though PandaGPT demonstrates impressive cross-modal capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU), it is only trained with aligned image-text pairs. </b> (160k image-language instruction-following data released by <a href="https://llava-vl.github.io/">LLaVa</a> and <a href="https://minigpt-4.github.io/">Mini-GPT4</a>). PandaGPT only introduces a small set of new parameters:
+           PandaGPT combines the multimodal encoders from ImageBind and the large language models from Vicuna, achieving impressive capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU). <b>Notably the current version of PandaGPT is only trained with aligned image-text pairs </b> (160k image-language instruction-following data released by <a href="https://llava-vl.github.io/">LLaVa</a> and <a href="https://minigpt-4.github.io/">Mini-GPT4</a>), with a small set of new parameters introduced:
           </p>
           <ul>
-            <li>A linear projection matrix to connect the representation produced by ImageBind to Vicun</li>
+            <li>A linear projection matrix connects the multimodal features from ImageBind to Vicuna</li>
             <li>Additional LoRA weights on the Vicuna’s attention modules</li>
 
           </ul>
@@ -239,7 +239,7 @@
           <h2 class="title is-3">Capabilities</h2>
           <div class="content has-text-justified">
             <p>
-              Compared to existing multimodal instruction-following models trained individually for one particular modality, PandaGPT can understand and combine information in different forms together, including text, image/video, audio, depth (3D), thermal (infrared radiation), and inertial measurement units (IMU). We find that the capabilities of PandaGPT include but are not limited to
+              Compared to existing multimodal instruction-following models trained individually for one particular modality, PandaGPT can understand and combine information in different forms together, including text, image/video, audio, depth (3D), thermal (infrared radiation), and inertial measurement units (IMU). We find that the capabilities of PandaGPT include but are not limited to <b>(with examples attached in the bottom of this page)</b>:
               <ul>
                 <li><b>image/video grounded question answering</b>.</li>
                 <li><b>image/video inspired creative writing</b>. </li>
@@ -264,6 +264,17 @@
         year={2023}
       }
 </code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      This website template is borrowed from the <a
+      href="https://minigpt-4.github.io/">MiniGPT-4</a> project, which is adapted from <a
+      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
   </div>
 </section>
 
@@ -303,23 +314,6 @@
 
 </section>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section class="section" id="Acknowledgement">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgement</h2>
-    <p>
-      This website template is borrowed from the <a
-      href="https://minigpt-4.github.io/">MiniGPT-4</a> project, which is adapted from <a
-      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    </p>
-  </div>
-</section>
 
 
 </body>
