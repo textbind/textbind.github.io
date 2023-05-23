@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PandaGPT">
+  <meta name="keywords" content="ChatGPT, open-source, multimodal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PandaGPT</title>
+
+  <meta name="google-site-verification" content="6lbYN1vX7A4sD8SrVniq84UEKyEUSBgxeP7d3FjuuK0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  </head>
+
+  <style>
+
+    #main{
+        position: relative;;
+        width: 1200px;
+    }
+
+    .box{
+        float: left;
+        padding: 15px 0 0 15px;
+/*        background-color: red;*/
+    }
+
+    .pic{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .pic img{
+        width: 500px;
+    }
+
+  </style>
+
+
+
+  <body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"></h1>
+          <h2 class="title is-2 publication-title">PandaGPT: One Model to Instruction-Follow Them All</h2>
+          <div class="is-size-5">
+            <span class="author-block">
+                <a href="https://yxuansu.github.io/" style="color:#008AD7;font-weight:normal;">Yixuan Su<sup>*</sup>
+                </a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/gmftbyGMFTBY" style="color:#008AD7;font-weight:normal;">Tian Lan<sup>*</sup></a>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/huayangli" style="color:#008AD7;font-weight:normal;">Huayang Li</a>,
+            </span>
+            <span class="author-block">
+              <a href="" style="color:#008AD7;font-weight:normal;">Yan Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="" style="color:#008AD7;font-weight:normal;">Jialu Xu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://jcyk.github.io/" style="color:#008AD7;font-weight:normal;">Deng Cai<sup>*</sup></a>
+            </span>
+          </div>
+
+          <br>
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Tencent AI Lab </span> -->
+            <!-- <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b>UCLA; </span> -->
+            <!-- <span class="author-block"><b style="color:#00A4EF; font-weight:normal">&#x25B6 </b>Microsoft Research, Redmond; </span> -->
+            <!-- <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b>Microsoft Cloud & AI </span> -->
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="font-size: 90%;"><sup>*</sup>Major contributors</span>
+            <!--<span class="author-block"><sup>&#x2628;</sup>Equal Advisory Contribution, </span> -->
+          </div>
+
+          <br>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="https://github.com/yxuansu/PandaGPT" target="_blank" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+              <span class="link-block">
+                      <a href="" target="_blank"
+                         class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        🤗
+                      </span>
+                      <span>Demo</span>
+                    </a>
+                  </span>
+              
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                  </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-laugh"></i>
+                  </span>
+                  <span>Model</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<script>
+      window.addEventListener('load', function() {
+        const urls = [
+          'https://bb0eec8976f38a480c.gradio.live',
+          'https://94c50413658b59829f.gradio.live',
+          'https://16440e488436f49d99.gradio.live',
+          'https://02edd560d60615d755.gradio.live',
+        ];
+        const randomIndex = Math.floor(Math.random() * urls.length);
+        const randomURL = urls[randomIndex];
+        const iframe = document.getElementById('gradio');
+        iframe.setAttribute('src', randomURL);
+      });
+    </script>
+
+
+<link rel="stylesheet" type="text/css" href="js/simple_style.css" />
+<script type="text/javascript" src="js/simple_swiper.js"></script>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            PandaGPT is a general-purpose instruction-following model that can both see and hear. Our pilot experiments show that PandaGPT can perform complex tasks such as detailed image description generation, writing stories inspired by videos, and answering questions about audios. More Interestingly, PandaGPT can take multimodal inputs simultaneously and compose their semantics naturally. For example, PandaGPT can connect how objects look in a photo and how they sound in an audio. To do so, PandaGPT combines the multimodal encoders from ImageBind and the large language models from Vicuna. Notably, though PandaGPT demonstrates impressive cross-modal capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU), it is only trained with aligned image-text pairs, thanks to the the shared embedding space provided by ImageBind. We hope that PandaGPT serves as an initial step toward building AGI that can perceive and understand inputs in different modalities holistically, as we humans do.
+</b>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Model</h2>
+        <div class="content has-text-justified">
+          <p>
+           PandaGPT combines the multimodal encoders from ImageBind and the large language models from Vicuna, achieving impressive capabilities in vision- and audio-grounded instruction following tasks. <b>Notably, though PandaGPT demonstrates impressive cross-modal capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU), it is only trained with aligned image-text pairs. </b> (160k image-language instruction-following data released by <a href="https://llava-vl.github.io/">LLaVa</a> and <a href="https://minigpt-4.github.io/">Mini-GPT4</a>). PandaGPT only introduces a small set of new parameters:
+          </p>
+          <ul>
+            <li>A linear projection matrix to connect the representation produced by ImageBind to Vicun</li>
+            <li>Additional LoRA weights on the Vicuna’s attention modules</li>
+
+          </ul>
+        </div>  
+        <img id="model" width="80%" src="images/pandagpt.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>The architecture of PandaGPT.</b></p>
+        </h3>
+
+      </div>
+    </div>
+    <br>
+    <br>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">Capabilities</h2>
+          <div class="content has-text-justified">
+            <p>
+              Compared to existing multimodal instruction-following models trained individually for one particular modality, PandaGPT can understand and combine information in different forms together, including text, image/video, audio, depth (3D), thermal (infrared radiation), and inertial measurement units (IMU). We find that the capabilities of PandaGPT include but are not limited to
+              <ul>
+                <li><b>image/video grounded question answering</b>.</li>
+                <li><b>image/video inspired creative writing</b>. </li>
+                <li><b>visual and auditory reasoning</b>.</li>
+                <li><b>multimodal arithmetic</b>.</li>
+                <li><b>...</b>. <span style="font-size: 95%;">(explore our <a href="">demo</a> on your own!)</li>
+              </ul>  
+           </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{pandagpt,
+        title={PandaGPT: Empowering Large Language Models with Visual and Auditory Understanding},
+        author={Yixuan Su and Tian Lan and Huayang Li and Yan Wang and Jialu Xu and Deng Cai},
+        journal={},
+        year={2023}
+      }
+</code></pre>
+  </div>
+</section>
+
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Examples</h2>
+      </div>
+    </div>
+  </div>
+  <!--/ Results. -->    
+<div class="container is-max-desktop">
+</section>
+
+
+<script src="js/Underscore-min.js"></script>
+<script src="js/index.js"></script>
+
+
+<section class="section">
+<div id="main">
+  <div class="box"><div class="pic"><img src="demos/audio-dog.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/audio-gunshot.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/image-couple-audio-rain.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/image-dog.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/image-girl-audio-rain.png" alt=""></div></div>
+
+
+  <div class="box"><div class="pic"><img src="demos/image-musk.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/image-woman-audio-ocean-waves.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/video-avengers.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/video-couple-audio-waves.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/video-noodle.png" alt=""></div></div>
+
+  <div class="box"><div class="pic"><img src="demos/video-spacex-rocket.png" alt=""></div></div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      This website template is borrowed from the <a
+      href="https://minigpt-4.github.io/">MiniGPT-4</a> project, which is adapted from <a
+      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</section>
+
+
+</body>
+
+</html>
