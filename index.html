@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="PandaGPT">
+        content="TextBind">
   <meta name="keywords" content="ChatGPT, open-source, multimodal">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PandaGPT</title>
+  <title>TextBind</title>
 
   <meta name="google-site-verification" content="6lbYN1vX7A4sD8SrVniq84UEKyEUSBgxeP7d3FjuuK0" />
 
@@ -68,7 +68,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title"></h1>
-          <h2 class="title is-2 publication-title">PandaGPT: One Model to Instruction-Follow Them All</h2>
+          <h2 class="title is-2 publication-title">TextBind: Multi-turn Interleaved Multimodal Instruction-following</h2>
           <div class="is-size-5">
             <span class="author-block">
                 <a href="https://yxuansu.github.io/" style="color:#f68946;font-weight:normal;">Yixuan Su<sup>*</sup><sup>&#x2628;</sup>
@@ -118,7 +118,7 @@
               </span>
               
               <span class="link-block">
-                <a href="https://github.com/yxuansu/PandaGPT" target="_blank" 
+                <a href="https://github.com/yxuansu/TextBind" target="_blank" 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -126,24 +126,13 @@
                   <span>Code</span>
                   </a>
               </span>
-              
-              <span class="link-block">
-                      <a href="https://huggingface.co/spaces/GMFTBY/PandaGPT" target="_blank"
-                         class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        🤗
-                      </span>
-                      <span>Demo</span>
-                    </a>
-                  </span>
-              
                <span class="link-block">
                       <a href="https://ailabnlp.tencent.com/research_demos/panda_gpt/" target="_blank"
                          class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         🤗
                       </span>
-                      <span>Demo-2 (Runs fast for users from mainland China)</span>
+                      <span>Demo</span>
                     </a>
                   </span>
               
@@ -212,23 +201,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            PandaGPT is a general-purpose instruction-following model that can both see and hear. Our pilot experiments show that PandaGPT can perform complex tasks such as detailed image description generation, writing stories inspired by videos, and answering questions about audios. More Interestingly, PandaGPT can take multimodal inputs simultaneously and compose their semantics naturally. For example, PandaGPT can connect how objects look in a photo and how they sound in an audio. To do so, PandaGPT combines the multimodal encoders from ImageBind and the large language models from Vicuna. Notably, though PandaGPT demonstrates impressive cross-modal capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU), it is only trained with aligned image-text pairs, thanks to the the shared embedding space provided by ImageBind. We hope that PandaGPT serves as an initial step toward building AGI that can perceive and understand inputs in different modalities holistically, as we humans do.
+            Large language models with instruction-following abilities have revolutionized the field of artificial intelligence. These models show exceptional generalizability to tackle various real-world tasks through their natural language interfaces. However, their performance heavily relies on high-quality exemplar data, which is often difficult to obtain. This challenge is further exacerbated when it comes to multimodal instruction following. We introduce \ours, an almost annotation-free framework for empowering larger language models with the multi-turn interleaved multimodal instruction-following capabilities. Our approach requires only image-caption pairs and generates multi-turn multimodal instruction-response conversations from a language model. We release our dataset to foster future research in the area of multimodal instruction following.
 </b>
           </p>
         </div>
       </div>
     </div>
 
-    <br>
+<br>
     <br>
     <div class="container">
-            <!-- Paper video. -->
             <h2 class="title has-text-centered">Video Presentation</h2>
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
 
                     <div class="publication-video">
-                        <!-- Youtube embed code here -->
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/96XgdQle7EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -242,7 +229,7 @@
         <h2 class="title is-3">Model</h2>
         <div class="content has-text-justified">
           <p>
-           PandaGPT combines the multimodal encoders from ImageBind and the large language models from Vicuna, achieving impressive capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU). <b>Notably the current version of PandaGPT is only trained with aligned image-text pairs </b> (160k image-language instruction-following data released by <a href="https://llava-vl.github.io/">LLaVa</a> and <a href="https://minigpt-4.github.io/">Mini-GPT4</a>), with a small set of new parameters introduced:
+           TextBind combines the multimodal encoders from ImageBind and the large language models from Vicuna, achieving impressive capabilities across six modalities (text, image/video, audio, depth, thermal, and IMU). <b>Notably the current version of TextBind is only trained with aligned image-text pairs </b> (160k image-language instruction-following data released by <a href="https://llava-vl.github.io/">LLaVa</a> and <a href="https://minigpt-4.github.io/">Mini-GPT4</a>), with a small set of new parameters introduced:
           </p>
           <ul>
             <li>A linear projection matrix connects the multimodal features from ImageBind to Vicuna</li>
@@ -250,9 +237,9 @@
 
           </ul>
         </div>  
-        <img id="model" width="80%" src="images/PandaGPT.png">
+        <img id="model" width="80%" src="images/TextBind.png">
         <h3 class="subtitle has-text-centered">
-          <p style="font-family:Times New Roman"><b>The architecture of PandaGPT.</b></p>
+          <p style="font-family:Times New Roman"><b>The architecture of TextBind.</b></p>
         </h3>
 
       </div>
@@ -264,13 +251,13 @@
           <h2 class="title is-3">Capabilities</h2>
           <div class="content has-text-justified">
             <p>
-              Compared to existing multimodal instruction-following models trained individually for one particular modality, PandaGPT can understand and combine information in different forms together, including text, image/video, audio, depth (3D), thermal (infrared radiation), and inertial measurement units (IMU). We find that the capabilities of PandaGPT include but are not limited to <b>(with examples attached in the bottom of this page)</b>:
+              Compared to existing multimodal instruction-following models trained individually for one particular modality, TextBind can understand and combine information in different forms together, including text, image/video, audio, depth (3D), thermal (infrared radiation), and inertial measurement units (IMU). We find that the capabilities of TextBind include but are not limited to <b>(with examples attached in the bottom of this page)</b>:
               <ul>
                 <li><b>image/video grounded question answering</b>.</li>
                 <li><b>image/video inspired creative writing</b>. </li>
                 <li><b>visual and auditory reasoning</b>.</li>
                 <li><b>multimodal arithmetic</b>.</li>
-                <li><b>...</b>. <span style="font-size: 95%;">(explore our <a href="https://huggingface.co/spaces/GMFTBY/PandaGPT">demo</a> on your own!)</li>
+                <li><b>...</b>. <span style="font-size: 95%;">(explore our <a href="https://huggingface.co/spaces/GMFTBY/TextBind">demo</a> on your own!)</li>
               </ul>  
            </p>
           </div>
@@ -284,7 +271,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>
       @article{su2023pandagpt,
-        title={PandaGPT: One Model To Instruction-Follow Them All},
+        title={TextBind: One Model To Instruction-Follow Them All},
         author={Su, Yixuan and Lan, Tian and Li, Huayang and Xu, Jialu and Wang, Yan and Cai, Deng},
         journal={arXiv preprint arXiv:2305.16355},
         year={2023}
@@ -298,7 +285,7 @@
     <h2 class="title">Acknowledgement</h2>
     <p>
       This website template is borrowed from the <a
-      href="https://minigpt-4.github.io/">MiniGPT-4</a> project, which is adapted from <a
+      href="https://panda-gpt.github.io/">PandaGPT</a> project, which is adapted from <a
       href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
     </p>
   </div>
